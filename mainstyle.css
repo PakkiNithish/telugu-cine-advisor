@@ -1,0 +1,186 @@
+:root {
+    --bg-dark: #0B0F13;
+    --bg-box: #0F1720;
+    --text-light: #EEF2F6;
+    --text-accent: #E50914;
+    --accent-button: #E50914;
+    --muted: #9AA4AD;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    background-color: var(--bg-box);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.header-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background-color: var(--bg-dark);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-accent);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header-link:hover {
+    background-color: #1a222c;
+}
+
+.logo {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--text-accent);
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.enter-button {
+    padding: 15px 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-light);
+    background-color: var(--accent-button);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.enter-button:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+/* Generic Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-dark);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-button {
+    color: var(--muted);
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Login/Signup specific styles */
+.login-title {
+    font-size: 2em;
+    color: var(--text-accent);
+    margin-bottom: 20px;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-button, .signup-button, .guest-button {
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+}
+
+.login-button {
+    background-color: var(--accent-button);
+    color: var(--text-light);
+}
+
+.signup-button {
+    background-color: var(--bg-box);
+    color: var(--text-light);
+}
+
+.guest-button {
+    background-color: transparent;
+    color: var(--muted);
+    border: 1px solid var(--muted);
+}
+
+.login-button:hover, .signup-button:hover, .guest-button:hover {
+    transform: scale(1.02);
+}

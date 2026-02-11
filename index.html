@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telugu-Cine-Advisor</title>
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="main.html" style="text-decoration: none;color:rgb(255, 0, 0)">🎬 Telugu-Cine-Advisor </a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="toprated.html">Top Rated</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="menu-container">
+                    <button id="menu-toggle" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <div class="section-title">Application</div>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Profile
+                        </a>
+
+                        <div class="theme-toggle-wrapper">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                Theme
+                            </span>
+                            <label class="switch">
+                                <input type="checkbox" id="theme-toggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="section-title">Account</div>
+                        <a href="main.html" class="logout">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            Logout
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 id="typewriter"></h2>
+        <h4 id="hero-quote"></h4>
+        <br>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search Telugu movies...">
+            <button id="searchButton">Search</button>
+        </div>
+    </section>
+
+    <section class="filters">
+        <h3>Search your Intrest</h3>
+        <select id="genreFilter">
+            <option value="">Genre</option>
+        </select>
+        <select id="yearFilter">
+            <option value="">Year</option>
+        </select>
+        <select id="ratingFilter">
+            <option value="">Rating</option>
+        </select>
+    </section>
+
+    <main>
+        <h2 id="movie-list-title" class="section-title">Popular Telugu Movies</h2>
+        <div id="movies-container" class="movies-container"></div>
+    </main>
+
+    <footer>
+        © 2025 Telugu-Cine-Advisor . All Rights Reserved.
+    </footer>
+
+    <div id="modal-backdrop" class="modal-backdrop"></div>
+    <div id="movie-modal" class="movie-modal">
+    </div>
+
+    <script src="indexscript.js"></script>
+</body>
+
+</html>

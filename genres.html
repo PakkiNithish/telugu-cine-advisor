@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telugu-Cine-Advisor - Explore Genres</title>
+<link rel="stylesheet" href="genrestyle.css">
+</head>
+<body>
+
+<header>
+<h1><a href="main.html" style="text-decoration: none;color:rgb(255, 0, 0)">🎬 Telugu-Cine-Advisor </a></h1>
+<nav>
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="genres.html" class="active">Genres</a></li>
+        <li><a href="toprated.html">Top Rated</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="menu-container">
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <div class="section-title">Application</div>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    Profile
+                </a>
+                <div class="theme-toggle-wrapper">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        Theme
+                    </span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="section-title">Account</div>
+                <a href="main.html" class="logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    Logout
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
+</header>
+
+<main>
+<aside class="genre-sidebar">
+    <h3 style="margin-bottom: 10px; color: var(--text);">Explore Genres</h3>
+    <ul class="genre-list" id="genreList">
+        <li><a href="#" data-genre-id="28" data-genre-name="Action">Action</a></li>
+        <li><a href="#" data-genre-id="10749" data-genre-name="Romance">Romance</a></li>
+        <li><a href="#" data-genre-id="35" data-genre-name="Comedy">Comedy</a></li>
+        <li><a href="#" data-genre-id="18" data-genre-name="Drama">Drama</a></li>
+        <li><a href="#" data-genre-id="53" data-genre-name="Thriller">Thriller</a></li>
+        <li><a href="#" data-genre-id="27" data-genre-name="Horror">Horror</a></li>
+        <li><a href="#" data-genre-id="9648" data-genre-name="Mystery">Mystery</a></li>
+        <li><a href="#" data-genre-id="80" data-genre-name="Crime">Crime</a></li>
+        <li><a href="#" data-genre-id="10751" data-genre-name="Family">Family</a></li>
+        <li><a href="#" data-genre-id="36" data-genre-name="Historical">Historical</a></li>
+        <li><a href="#" data-genre-id="10752" data-genre-name="War">War</a></li>
+        <li><a href="#" data-genre-id="99" data-genre-name="Documentary">Documentary</a></li>
+    </ul>
+</aside>
+
+<section class="main-content">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+        <h2 class="section-title" id="genreTitle">Explore Telugu Genres</h2>
+        <button id="sortButton">Sort: Top to Bottom</button>
+    </div>
+    <div class="search-container-header" style="margin-bottom: 1.5rem; justify-content: center;">
+        <input type="text" id="searchInput" placeholder="Search within this genre..." style="width: 70%;">
+        <button id="searchButton">Search</button>
+    </div>
+    <div id="moviesContainer" class="movies-container">
+        </div>
+</section>
+</main>
+
+<footer>
+© 2025 Telugu-Cine-Advisor. All Rights Reserved.
+</footer>
+
+<div id="movieModalOverlay" class="modal-overlay">
+<div class="detail-modal">
+    <button class="close-btn" id="closeModalBtn">&times;</button>
+    
+    <div id="modalContent">
+        <div style="text-align: center; padding: 50px;">
+            <p>Loading movie details...</p>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script src="genrescript.js"></script>
+
+    <!-- UP IS MAIN SCRIPT WHERE SIMILAR MOVIES IS REMOVED -->
+</body>
+</html>
